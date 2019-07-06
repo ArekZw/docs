@@ -2,14 +2,18 @@
 
 [@style.tools/async](https://npmjs.com/package/@style.tools/async) is lightweight asynchronous CSS and Javascript loader.
 
-
 ```javascript
 $async(
-   [/*stylesheets or scripts*/],	// string, object or an array of strings or objects
+   [/*stylesheets*/],	// string, object or an array of strings or objects
    {/*options*/},			// object
    [/*capture*/],			// string, object or an array of strings or objects 
    {/*capture options*/}		// object
+
+   /* 5 to 8th = javascript loader */
+   [],{},[],{}
 ).then(function() { /* ready */ });	
+
+$async.js([],{},[],{}) // direct access to javascript loader
 ```
 
 ### Features
@@ -38,9 +42,6 @@ composer require styletools/async
 ```
 
 The script is optimized to achieve the minimum size possible for above the fold optimization.
-
-<details/>
-  <summary>Show script sizes of async loader modules</summary>
 
 ```text
 async-core.js Size: 2.04 kb (2089 bytes) Gzip: 0.99 kb (1012 bytes).
@@ -71,7 +72,6 @@ capture-css.js Size: 0.14 kb (141 bytes) Gzip: 0.13 kb (131 bytes).
 capture-js.js Size: 0.07 kb (69 bytes) Gzip: 0.08 kb (87 bytes).
 attr-config.js Size: 0.29 kb (293 bytes) Gzip: 0.22 kb (229 bytes).
 ```
-</details>
 
 ---
 
@@ -98,10 +98,10 @@ Non-compressed.
 	$async(["js/script.css", {"src": "js/extra.jss", "load_timing": "requestIdleCallback"}]);
 
 	// when using css-loader + js-loader, $async accept 8 parameters (last 4 for js-loader/capture)
-	$async(0,0,0,0,["js/script.css", {"src": "js/extra.jss", "load_timing": "requestIdleCallback"}]);
+	$async(0,0,0,0,["js/script.css", {"src": "js/extra.js", "load_timing": "requestIdleCallback"}]);
 
 	// when using css-loader + js-loader, $async.js provides direct access to js-loader/capture
-	$async.js(["js/script.css", {"src": "js/extra.jss", "load_timing": "requestIdleCallback"}]);
+	$async.js(["js/script.js", {"src": "js/extra.js", "load_timing": "requestIdleCallback"}]);
 
 	// direct access to capture config
 	$async.capture();

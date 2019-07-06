@@ -96,7 +96,7 @@ $lazy('div#id', function(entries) {
 
 ## `data-lazy` JSON config
 
-To enable usage of page based lazy loading config in combination with a strict `Content-Security-Policy` the script can be configured using a `data-lazy` attribute on the script source element.
+To enable usage in combination with a strict `Content-Security-Policy` the script can be configured using a `data-lazy` attribute on the script source element.
 
 
 ```html
