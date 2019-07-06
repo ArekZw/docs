@@ -1,4 +1,4 @@
-A free Frontend Optimization (FEO) widget that works offline and for pages behind a login.
+🔬 Style.Tools FEO widget is a free frontend optimization widget that works offline and for pages behind a login.
 
 - critical CSS generator
 - CSS editor
