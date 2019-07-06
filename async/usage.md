@@ -264,9 +264,9 @@ $async(
 
 ## Custom timing
 
-`$async.timing` enables to make use of the timing module for any purpose, for example for script startup-time optimization or to execute a script when an element scrolls into view.
+`$async.time` enables to make use of the timing module for any purpose, for example for script startup-time optimization or to execute a script when an element scrolls into view.
 
-`$async.timing` requires both the API and timing module.
+`$async.time` requires both the API and timing module.
 
 ```javascript
 $async.time(
@@ -283,4 +283,4 @@ $async.time(
 
 When using debug sources, the browser console will provide Performance API details.
 
-![$async.timing](../gitbook/images/async-timing.png)
+![$async.time](../gitbook/images/async-timing.png)
