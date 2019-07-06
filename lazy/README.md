@@ -1,6 +1,6 @@
 # Introduction
 
-[@style.tools/lazy](https://npmjs.com/package/@style.tools/lazy) is a lightweight lazy loader based on [Intersection Observer V2](https://developers.google.com/web/updates/2019/02/intersectionobserver-v2) with tiny fallback for old browsers.
+[@style.tools/lazy](https://npmjs.com/package/@style.tools/lazy) is a lightweight lazy loader based on [Intersection Observer V2](https://developers.google.com/web/updates/2019/02/intersectionobserver-v2) with a tiny fallback for old browsers.
 
 ```javascript
 $lazy(
@@ -39,9 +39,9 @@ The `selector` entry accepts multiple configuration formats including a string, 
 
 The array based index config is a compressed format to save size in the HTML document. 
 
-[0] = selector
-[1] = threshold OR observer config when an object
-[2] = rootMargin
+- [0] = selector
+- [1] = threshold OR observer config when an object
+- [2] = rootMargin
 
 #### Simple config
 
@@ -62,7 +62,7 @@ The array based index config is a compressed format to save size in the HTML doc
 
 ## Event
 
-When an element enters the viewport the event `$lazy` is fired on the element. The event contains a reference to the HTML node and `IntersectionObserverEntry`.
+When an element enters the viewport the event `$lazy` is fired on the element. The event contains a reference to the HTML node and the `IntersectionObserverEntry`.
 
 ```javascript
 // listen for $lazy event on any element
