@@ -269,7 +269,7 @@ $async(
 `$async.timing` requires both the API and timing module.
 
 ```javascript
-$async.timing(
+$async.time(
   {
      "type": "requestIdleCallback",
      "timeout": 3000
