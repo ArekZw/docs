@@ -11,8 +11,6 @@
     * ...
 
 * [$lazy](lazy/README.md)
-  * [Installation](lazy/installation.md)
-  * [Usage](lazy/usage.md)
 
 * [Critical CSS Generator](critical-css-generator/README.md)
   * [Usage: simple generator](critical-css-generator/simple-usage.md)
