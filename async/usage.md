@@ -13,7 +13,7 @@ $async(
 // alternative load method for chaining when using the API module
 $async.load(/*...*/).load(/*...*/).then(/*...*/)
 
-// custom timing
+// custom timing when using the API module
 $async.time(
   {/*timing config*/},
   function() {
@@ -281,6 +281,6 @@ $async.timing(
 );
 ```
 
-When using debug sources, the browser console will provide Performance API details based on the debug data.
+When using debug sources, the browser console will provide Performance API details.
 
 ![$async.timing](../gitbook/images/async-timing.png)
