@@ -243,9 +243,8 @@ The following options can be defined via the global options.
 
 
 ```javascript
-// preload popup script in background
 $async(
-  ["sheet1.css", {href:"sheet2.css, ref: "test"}], 
+  ["sheet1.css", {"href":"sheet2.css", "ref": "test"}], 
   // global options applied to sheet1.css and sheet2.css
   // ref from sheet2.css overrides the global ref
   {
