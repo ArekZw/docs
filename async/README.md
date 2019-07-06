@@ -9,7 +9,7 @@ $async(
    [/*capture*/],			// string, object or an array of strings or objects 
    {/*capture options*/}		// object
 
-   /* 5 to 8th = javascript loader */
+   /* 5 to 8th = javascript loader, same config as CSS loader */
    [],{},[],{}
 ).then(function() { /* ready */ });	
 
