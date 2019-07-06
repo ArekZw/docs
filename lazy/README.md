@@ -9,6 +9,18 @@ $lazy(
 );	
 ```
 
+### Install via npm
+
+```bash
+npm install @style.tools/lazy --save
+```
+
+### Install via PHP Composer
+
+```bash
+composer require styletools/lazy
+```
+
 ## Config
 
 The `selector` entry accepts multiple configuration formats including a string, an Array, a Node, NodeList or a JSON object with `observer` configuration.
