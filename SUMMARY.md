@@ -2,13 +2,13 @@
 
 * [Introduction](README.md)
 
+* [FEO widget](feo/README.md)
+
 * [$async CSS/script loader](async/README.md)
   * [Installation](async/installation.md)
   * [Usage](async/usage.md)
     * [Capture](async/usage-capture.md)
   * [IIFE generator](async/iife-generator.md)
-  * Guides
-    * ...
 
 * [$lazy](lazy/README.md)
 
