@@ -1,3 +1,3 @@
 # Introduction
 
-📐 Style.Tools provides solutions for frontend optimization (FEO).
+🔬 Style.Tools provides solutions for frontend optimization (FEO).
