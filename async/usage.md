@@ -123,7 +123,7 @@ The stylesheet load configuration object contains the following parameters:
 | `target.after`                 | A query selector for an DOM element to insert the stylesheet after. | `String`  |
 | `target.before`                 | A query selector for an DOM element to insert the stylesheet after. | `String`  |
 | `load_timing`                 | Download timing configuration (see [timing](#) module). | `String` or `Object`  |
-| `load_timing.type`                 | Timing method type (`domReady`, `setTimeout`, `requestAnimationFrame`, `requestIdleCallback`, `inview`, `media`) | `String`  |
+| `load_timing.type`                 | Timing method type (`domReady`, `setTimeout`, `requestAnimationFrame`, `requestIdleCallback`, `inview`, `media`, `method`) | `String`  |
 | `load_timing.frame`                 | Frame target for method `requestAnimationFrame` | `Number`  |
 | `load_timing.timeout`                 | Timeout in seconds for methods `requestIdleCallback` and `requestAnimationFrame` | `Number`  |
 | `load_timing.media`                 | Media Query for method `media` (responsive) | `String`  |
@@ -134,8 +134,11 @@ The stylesheet load configuration object contains the following parameters:
 | `load_timing.offset.bottom`                 | Offset from bottom | `Number`  |
 | `load_timing.offset.left`                 | Offset from left | `Number`  |
 | `load_timing.threshold`                 | Ratio of an elements height and width that needs to be visible for method `inview` | `Number`  |
-| `render_timing`                 | Render timing configuration (see [timing](#) module). | `String` or `Object`  |
+| `load_timing.method`                 | Method name to define on `window` to trigger the callback. | `String`  |
+| `render_timing`                 | CSS render timing configuration (see [timing](#) module). | `String` or `Object`  |
 | `render_timing.*`                 | See `load_timing.*` | `Object` |
+| `exec_timing`                 | Script exec timing configuration (see [timing](#) module). | `String` or `Object`  |
+| `exec_timing.*`                 | See `load_timing.*` | `Object` |
 | `cache`                 | A string or object with cache configuration (see [cache](#) module). | `String` or `Object`  |
 | `cache.type`                 | Cache method, `localstorage` or `cache-api`. | `String`  |
 | `cache.namespace`                 | Namespace for cache. | `String`  |
@@ -191,6 +194,35 @@ The stylesheet load configuration object contains the following parameters:
   },
   "render_timing": "requestAnimationFrame"
 }
+```
+
+### Example just-in-time loading
+
+`$async` enables `just-in-time` loading of CSS and javascript which can provide a great performance win for many websites. The following example preloads a popup script on `domReady` and executes it when the script is needed, saving CPU time for most visitors.
+
+```javascript
+// preload popup script in background
+$async.js({
+    "ref": "popup",
+    "dependencies": "jquery",
+    "load_timing": "domReady",
+    "exec_timing": {
+        "type": "method",
+        "method": "load_popup_script"
+    }
+});
+
+// just-in-time
+jQuery('button.popup').on('click', function() {
+
+    // code after popup script is loaded
+    $async.on('popup', function() {
+        alert('popup script ready');
+    });
+    
+    // load popup script
+    load_popup_script();
+});
 ```
 
 ## Global configuration

@@ -104,8 +104,11 @@ Non-compressed.
 	$async.js(["js/script.js", {"src": "js/extra.js", "load_timing": "requestIdleCallback"}]);
 
 	// direct access to capture config
-	$async.capture();
-	$async.js.capture();
+	$async.capture(
+		[/*capture*/],			// string, object or an array of strings or objects 
+   		{/*capture options*/}
+   	);
+	$async.js.capture([],{});
 </script>
 ```
 
