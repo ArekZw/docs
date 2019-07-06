@@ -31,14 +31,14 @@ The widget provides localhost and offline support via a Service Worker on domain
 
 You can use the bookmark functionality of your browser to create a new bookmark. The short cut in Google Chrome and Firefox is `Ctrl-D`.
 
-![Add a new bookmark](./gitbook/images/add-bookmark.png)
+![Add a new bookmark](../gitbook/images/add-bookmark.png)
 
 Once the bookmark is added, you can drag it to the bookmarks bar for quick access.
 
-![📐 Style.Tools bookmark](./gitbook/images/browser-bookmark.png)
+![📐 Style.Tools bookmark](../gitbook/images/browser-bookmark.png)
 
 ## Drag & drop to bookmarks bar
 
 📐 Style.Tools provides a drag & drop link via the logo (top left). It will automatically create the correct widget link in the bookmarks.
 
-![Drag & drop bookmark from 📐 Style.Tools](./gitbook/images/drag-bookmark.png)
+![Drag & drop bookmark from 📐 Style.Tools](../gitbook/images/drag-bookmark.png)
