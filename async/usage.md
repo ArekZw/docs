@@ -12,6 +12,15 @@ $async(
 
 // alternative load method for chaining when using the API module
 $async.load(/*...*/).load(/*...*/).then(/*...*/)
+
+// custom timing
+$async.time(
+  {/*timing config*/},
+  function() {
+    // script
+  },
+  [/*optional debug-info*/]
+);
 ```
 
 # Examples
@@ -252,3 +261,26 @@ $async(
     "load_timing": "domReady"
 });
 ```
+
+## Custom timing
+
+`$async.timing` enables to make use of the timing module for any purpose, for example for script startup-time optimization or to execute a script when an element scrolls into view.
+
+`$async.timing` requires both the API and timing module.
+
+```javascript
+$async.timing(
+  {
+     "type": "requestIdleCallback",
+     "timeout": 3000
+  },
+  function() {
+    // big script
+  },
+  ["big-script"]
+);
+```
+
+When using debug sources, the browser console will provide Performance API details based on the debug data.
+
+![$async.timing](../gitbook/images/async-timing.png)
