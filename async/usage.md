@@ -208,7 +208,7 @@ $async.js({
     "load_timing": "domReady",
     "exec_timing": {
         "type": "method",
-        "method": "load_popup_script"
+        "method": "exec_popup_script"
     }
 });
 
@@ -221,7 +221,7 @@ jQuery('button.popup').on('click', function() {
     });
     
     // load popup script
-    load_popup_script();
+    exec_popup_script();
 });
 ```
 
@@ -241,3 +241,15 @@ The following options can be defined via the global options.
 | `render_timing`      |
 | `cache`              |
 
+
+```javascript
+// preload popup script in background
+$async(
+  ["sheet1.css", {href:"sheet2.css, ref: "test"}], 
+  // global options applied to sheet1.css and sheet2.css
+  // ref from sheet2.css overrides the global ref
+  {
+    "ref": "global-options",
+    "load_timing": "domReady"
+});
+```
