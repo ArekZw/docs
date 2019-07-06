@@ -20,6 +20,6 @@ The critical CSS generator provided by Style.Tools FEO widget can provide a much
 
 ### FEO plugins
 
-Our engineers can provide tailored optimization solutions for any CMS. The solution can include fully automated critical CSS and unused CSS removal to maintain optimal Google performance scores on the long term.
+Our engineers can provide tailored optimization solutions for any CMS. The solution can include fully automated critical CSS and unused CSS removal to maintain optimal Google performance scores.
 
 ![WordPress FEO plugin](../gitbook/images/wordpress-feo-plugin.png)
