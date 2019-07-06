@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-* [FEO widget](feo/README.md)
+* [📐 FEO widget](feo/README.md)
 
 * [$async CSS/script loader](async/README.md)
   * [Installation](async/installation.md)
