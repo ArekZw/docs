@@ -281,6 +281,12 @@ $async.time(
 );
 ```
 
+With JSON compression it would reuslt in the following config for `requestIdleCallback` with a `3000ms` timeout.
+
+```json
+{"2":53,"57":3000}
+```
+
 When using debug sources, the browser console will provide Performance API details.
 
 ![$async.time](../gitbook/images/async-timing.png)
