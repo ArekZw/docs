@@ -190,6 +190,6 @@ Alternatively, when including `$lazy` inline, the `data-poly` attribute enables 
 </script>
 ```
 
-### Example 
+### Example Performance API timings
 
 ![$lazy polyfill](../gitbook/images/lazy-polyfill.png)
