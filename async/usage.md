@@ -224,13 +224,10 @@ $async.js({
 // just-in-time
 jQuery('button.popup').on('click', function() {
 
-    // code after popup script is loaded
-    $async.on('popup', function() {
-        alert('popup script ready');
-    });
-    
     // load popup script
-    exec_popup_script();
+    exec_popup_script().then(function() {
+      alert('popup script ready');
+    });
 });
 ```
 
