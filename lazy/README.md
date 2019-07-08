@@ -190,4 +190,6 @@ Alternatively, when including `$lazy` inline, the `data-poly` attribute enables 
 </script>
 ```
 
+### Example 
+
 ![$lazy polyfill](../gitbook/images/lazy-polyfill.png)
